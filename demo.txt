@@ -1,0 +1,7 @@
+<?php
+if ($_SERVER['HTTP_USER_AGENT'] == 'ContentSync/2.0 (+https://cms-content-sync.io/)') {
+    foreach (getallheaders() as $name => $value) {
+        \Drupal::logger($name)->notice('<pre><code>' . print_r($value, TRUE) . '</code></pre>');
+    }
+}
+?>
